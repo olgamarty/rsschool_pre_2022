@@ -19,6 +19,26 @@ html {
 	scroll-behavior: smooth; 
 }
 
+.section-title__wrapper {
+	display: flex;
+	justify-content: center;
+	width: 700px;
+	margin: 0 auto 60px;
+	background-image: linear-gradient(to top, #000 39px, #bdae82 39px, #bdae82 41px, #000 41px);
+}
+
+.section-title {
+	display: inline-block;
+	padding: 0 20px;
+	margin: 0 auto;
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 80px;
+	color: #BDAE82;
+	background-color: #000000;
+}
+
 .button {
 	width: 220px;
 	height: 55px;
@@ -30,6 +50,16 @@ html {
 	background: #BDAE82;
 	border: none;
 	outline: none;
+}
+
+.button:hover {
+	color: #ffffff;
+}
+
+.icon {
+	width: 50px;
+	height: 50px;
+	fill: #ffffff;
 }
 
 .container {
@@ -47,6 +77,7 @@ html {
 }
 
 .hero-container {
+	margin-bottom: 100px;
 	background-image: url('./assets/img/header-bg.jpg');
 	background-position: center -90px;
 	background-repeat: no-repeat;
@@ -118,4 +149,47 @@ html {
 	margin-bottom: 25px;
 	font-size: 20px;
 	line-height: 40px;
+}
+
+.skills-items {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0 0 90px;
+	list-style: none;
+}
+
+.skills-item {
+	width: 320px;
+	padding: 100px 20px 0;	
+	background-image: url(assets/svg/camera-icon.svg);
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+}
+
+.skills-item:nth-child(2) {
+	background-image: url(assets/svg/video-icon.svg);
+}
+
+.skills-item:nth-child(3) {
+	background-image: url(assets/svg/photo-icon.svg);
+}
+
+.skills-item:nth-child(4) {
+	background-image: url(assets/svg/mic-icon.svg);
+}
+
+.skills-item__title {
+	margin: 0 20px 20px;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.skills-item__description {
+	font-size: 18px;
+	line-height: 36px;
+	text-align: center;
 }
