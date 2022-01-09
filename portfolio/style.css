@@ -1,3 +1,9 @@
+:root {
+	--color-gold: #bdae82;
+	--color-black: #000000;
+	--color-white: #ffffff;
+}
+
 *,
 *::before,
 *::after {
@@ -11,8 +17,8 @@ body {
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 36px;
-	color: #FFFFFF;
-	background-color: #000000;
+	color: var(--color-white);
+	background-color: var(--color-black);
 }
 
 html {
@@ -35,31 +41,31 @@ html {
 	font-weight: bold;
 	font-size: 40px;
 	line-height: 80px;
-	color: #BDAE82;
-	background-color: #000000;
+	color: var(--color-gold);
+	background-color: var(--color-black);
 }
 
 .button {
 	width: 220px;
 	height: 55px;
-	color: #000000;
+	color: var(--color-black);
 	font-size: 20px;
 	line-height: 40px;
 	font-weight: normal;
 	text-align: center;
-	background: #BDAE82;
+	background: var(--color-gold);
 	border: none;
 	outline: none;
 }
 
 .button:hover {
-	color: #ffffff;
+	color: var(--color-white);
 }
 
 .icon {
 	width: 50px;
 	height: 50px;
-	fill: #ffffff;
+	fill: var(--color-white);
 }
 
 .container {
@@ -91,7 +97,7 @@ html {
 	font-weight: bold;
 	font-size: 60px;
 	line-height: 100px;
-	color: #FFFFFF;
+	color: var(--color-white);
 }
 
 .header-nav {
@@ -109,7 +115,7 @@ html {
 }
 
 .nav-link {
-	color: #ffffff;
+	color: var(--color-white);
 	text-decoration: none;
 	font-weight: normal;
 	font-size: 20px;
@@ -117,7 +123,7 @@ html {
 }
 
 .lenguages-container {
-	color: #ffffff;
+	color: var(--color-white);
 	font-weight: bold;
 	font-size: 20px;
 	line-height: 50px;
@@ -125,7 +131,7 @@ html {
 
 .lang-btn {
 	display: inline-block;	
-	color: #ffffff;
+	color: var(--color-white);
 	text-decoration: none;	
 	font-weight: bold;
 	font-size: 20px;
@@ -141,7 +147,7 @@ html {
 }
 
 .active {
-	color: #bdae82;
+	color: var(--color-gold);
 }
 
 .hero-description {
@@ -156,7 +162,7 @@ html {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	padding: 0;
-	margin: 0 0 90px;
+	margin: 0 0 92px;
 	list-style: none;
 }
 
@@ -192,4 +198,24 @@ html {
 	font-size: 18px;
 	line-height: 36px;
 	text-align: center;
+}
+
+.toggle {
+	display: flex;
+	justify-content: space-between;
+	width: 895px;
+	margin: 0 auto 60px;
+}
+
+.btn-toggle {
+	color: var(--color-gold);
+	background-color: transparent;
+	border: 2px solid var(--color-gold);
+}
+
+.collage {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;		
+	gap: 25px;
+	margin-bottom: 100px;
 }
