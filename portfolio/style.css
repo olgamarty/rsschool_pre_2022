@@ -46,6 +46,7 @@ html {
 }
 
 .button {
+	display: block;
 	width: 220px;
 	height: 55px;
 	color: var(--color-black);
@@ -241,4 +242,44 @@ html {
 .icon-video {	
 	width: 130px;
 	height: 130px;
+}
+
+.price-wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 25px;
+	margin-bottom: 100px;
+}
+
+.price-item {	
+	width: 450px;
+	padding: 40px;
+	text-align: center;
+	border: 3px solid #BDAE82;
+}
+
+.price-item__title {
+	margin: 0 0 20px;
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 56px;
+}
+
+.price-number {
+	display: block;
+	margin: 0 0 20px;
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 48px;
+	color: var(--color-gold);
+}
+
+.price-item__advantage {
+	display: block;
+}
+
+.btn-price {
+	margin: 40px auto 0;
 }
