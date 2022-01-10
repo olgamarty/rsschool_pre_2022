@@ -236,12 +236,17 @@ html {
 }
 
 .video-btn {
-	position: absolute;
+	position: absolute;	
 }
 
 .icon-video {	
 	width: 130px;
 	height: 130px;
+	transition: fill 0.5s;
+}
+
+.video-btn:hover .icon-video {	
+	fill: var(--color-gold);
 }
 
 .price-wrapper {
@@ -255,7 +260,7 @@ html {
 	width: 450px;
 	padding: 40px;
 	text-align: center;
-	border: 3px solid #BDAE82;
+	border: 3px solid var(--color-gold);
 }
 
 .price-item__title {
