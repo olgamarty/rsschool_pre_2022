@@ -77,6 +77,11 @@ html {
 	width: 50px;
 	height: 50px;
 	fill: var(--color-white);
+	transition: fill 0.5s;
+}
+
+.icon:hover {
+	fill: var(--color-gold);
 }
 
 .container {
@@ -99,6 +104,11 @@ html {
 	background-position: center -90px;
 	background-repeat: no-repeat;
 	padding: 170px 860px 330px 80px;
+}
+
+.logo-link {
+	height: 50px;
+	text-decoration: none;
 }
 
 .hero-title {
@@ -131,6 +141,11 @@ html {
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 50px;
+	transition: color 0.5s;
+}
+
+.nav-link:hover {
+	color: var(--color-gold);
 }
 
 .lenguages-container {
@@ -147,6 +162,7 @@ html {
 	font-weight: bold;
 	font-size: 20px;
 	line-height: 50px;
+	transition: color 0.5s;
 }
 
 .lang-btn:first-child {
@@ -155,6 +171,10 @@ html {
 
 .lang-btn:last-child {
 	padding-left: 4px;
+}
+
+.lang-btn:hover {
+	color: var(--color-gold);
 }
 
 .active {
@@ -250,11 +270,6 @@ html {
 .icon-video {	
 	width: 130px;
 	height: 130px;
-	transition: fill 0.5s;
-}
-
-.video-btn:hover .icon-video {	
-	fill: var(--color-gold);
 }
 
 .price-wrapper {
@@ -337,4 +352,54 @@ html {
 	height: 100px;
 	resize: none;
 	margin-bottom: 30px;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 20px;
+}
+
+.footer-copyright {
+	font-size: 20px;
+	line-height: 50px;
+	word-spacing: 15px;
+}
+
+.footer-year {
+	font-size: 18px;
+}
+
+.footer-link {
+	font-size: 20px;
+	line-height: 50px;
+	color: var(--color-white);
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+.footer-link:hover {
+	color: var(--color-gold);
+}
+
+.footer-github {
+	font-size: 19px;
+	margin-right: 20px;
+}
+
+.sosial-link {
+	display: inline-block;
+	margin-left: 15px;
+	margin-top: 12px;
+	text-decoration: none;
+}
+
+.sosial-link:first-child {
+	margin-left: 0;
+}
+
+.footer-icon {
+	width: 32px;
+	height: 32px;	
 }
