@@ -10,6 +10,14 @@
 	box-sizing: border-box;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-text-fill-color: var(--color-gold);
+	transition: background-color 0s ease-in-out 9000s;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -50,6 +58,7 @@ html {
 	width: 220px;
 	height: 55px;
 	color: var(--color-black);
+	font-family: 'Inter', sans-serif;
 	font-size: 20px;
 	line-height: 40px;
 	font-weight: normal;
@@ -286,4 +295,46 @@ html {
 
 .btn-price {
 	margin: 40px auto 0;
+}
+
+.contacts-container {
+	padding: 60px 20px 195px 970px;
+	background-image: url(assets/img/contacts-bg.jpg);
+	background-repeat: no-repeat;
+	/* background-size: auto 700px;
+	background-position: center center; */
+}
+
+.contacts-title {
+	padding: 0;
+	margin: 0 0 40px;
+	background-color: transparent;
+}
+
+.contacts-input {
+	display: block;
+	width: 450px;
+	padding: 3px 18px;
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	line-height: 40px;
+	font-weight: normal;
+	color: var(--color-gold);
+	border: 2px solid var(--color-gold);
+	background: rgba(0, 0, 0, 0.5);
+	margin-bottom: 20px;
+}
+
+::placeholder {
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	line-height: 40px;
+	font-weight: normal;
+	color: var(--color-gold);
+}
+
+.contact-textarea {
+	height: 100px;
+	resize: none;
+	margin-bottom: 30px;
 }

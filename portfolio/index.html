@@ -21,9 +21,9 @@
 				<ul class="nav-list">
 					<li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
 					<li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-					<li class="nav-item"><a href="" class="nav-link">Video</a></li>
-					<li class="nav-item"><a href="" class="nav-link">Price</a></li>
-					<li class="nav-item"><a href="" class="nav-link">Contacts</a></li>
+					<li class="nav-item"><a href="#video" class="nav-link">Video</a></li>
+					<li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
+					<li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
 				</ul>
 			</nav>
 			<div class="lenguages-container">
@@ -90,7 +90,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="video">
+		<section class="video" id="video">
 			<div class="container">
 				<div class="section-title__wrapper">
 					<h2 class="section-title">Video</h2>
@@ -105,7 +105,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="price">
+		<section class="price" id="price">
 			<div class="container">
 				<div class="section-title__wrapper">
 					<h2 class="section-title">Price</h2>
@@ -143,8 +143,17 @@
 					</div>
 				</div>
 		</section>
-		<section class="contacts">
-
+		<section class="contacts" id="contacts">
+			<div class="container contacts-container">
+				<h2 class="section-title contacts-title">Contact with me</h2>
+				<form class="contacts-form">
+					<input type="email" class="contacts-input" name="contact-email" placeholder="E-mail">
+					<input type="tel" class="contacts-input" name="contact-phone" placeholder="Phone">
+					<textarea class="contacts-input contact-textarea" name="contact-message"
+						placeholder="Message"></textarea>
+					<button type="submit" class="button">Send message</button>
+				</form>
+			</div>
 		</section>
 	</main>
 	<footer class="footer">
