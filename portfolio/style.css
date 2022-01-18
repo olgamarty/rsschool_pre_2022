@@ -247,7 +247,7 @@ html {
 
 .collage {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;		
+	grid-template-columns: 1fr 1fr 1fr;	 
 	gap: 25px;
 	margin-bottom: 100px;
 }
@@ -369,10 +369,6 @@ html {
 	word-spacing: 15px;
 }
 
-.footer-year {
-	font-size: 18px;
-}
-
 .footer-link {
 	font-size: 20px;
 	line-height: 50px;
@@ -385,8 +381,7 @@ html {
 	color: var(--color-gold);
 }
 
-.footer-github {
-	font-size: 19px;
+.footer-github {	
 	margin-right: 20px;
 }
 
@@ -396,7 +391,7 @@ html {
 	align-items: flex-end;
 	width: 188px;
 	height: 50px;
-	margin: 0;
+	margin: 5px 0 0;
 	padding: 0;
 	list-style: none;
 }
