@@ -424,13 +424,19 @@ html {
 	height: 32px;	
 }
 
+@media screen and (max-width: 1279px) {
+	.skills-container {
+		max-width: 955px;
+	}
+}
+
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 	.header-container {
 		background-position: calc(50% + 110px) 0;
 	}
 	
-	.hero-container {	
+	.hero-container {
 		background-position: calc(50% + 110px) -90px;
 	}
 
@@ -440,6 +446,10 @@ html {
 
 	.contacts-title {
 		text-shadow: 1px 1px 10px var(--color-black);
+	}
+
+	.toggle {
+		max-width: 500px;
 	}
 }
 
@@ -569,10 +579,12 @@ html {
 
 	/* ------------ */
 
-	.hero-container {			
+	.hero-container {					
+		height: 499px;
+		overflow: hidden;	
 		background-color: var(--color-black);
 		background-image: url(assets/img/header-bg-mini.jpg);
-		padding: 78px 64px 150px 60px;
+		padding: 78px 64px 50px 60px;
 		margin-bottom: 78px;
 	}
 
@@ -733,7 +745,7 @@ html {
 
 	.hero-container {	
 		background-color: var(--color-black);
-		padding: 78px 30px 125px;
+		padding: 78px 30px 50px;
 		margin-bottom: 75px;
 	}
 
