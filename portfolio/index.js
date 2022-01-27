@@ -4,6 +4,10 @@ const body = document.querySelector('body');
 const iconBurger = document.querySelector('.icon-burger');
 const headerNav = document.querySelector('.header-nav');
 const darkness = document.querySelector('.darkness');
+const portfolioBtns = document.querySelector('.toggle');
+const btnToggle = portfolioBtns.querySelectorAll('.btn-toggle');
+const collageItems = document.querySelectorAll('.collage-item');
+
 
 iconBurger.addEventListener('click', function () {
 	iconBurger.classList.toggle('opener');
@@ -22,6 +26,16 @@ function closeMenu(event) {
 }
 
 headerNav.addEventListener('click', closeMenu);
+
+function changeImage(event) {
+	if (event.target.classList.contains('btn-toggle')) {
+		btnToggle.forEach(el => el.classList.remove('btn-active'));
+		event.target.classList.add('btn-active');
+		collageItems.forEach((img, index) => img.src = `./assets/img/${event.target.dataset.season}/${index + 1}.jpg`)
+	}
+}
+
+portfolioBtns.addEventListener('click', changeImage)
 
 
 console.log(`

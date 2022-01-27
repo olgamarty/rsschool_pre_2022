@@ -62,14 +62,14 @@ html {
 	display: block;
 	width: 220px;
 	height: 55px;
-	color: var(--color-black);
+	color: var(--color-gold);
 	font-family: inherit;
 	font-size: 20px;
 	line-height: 40px;
 	font-weight: normal;
 	text-align: center;
-	background: var(--color-gold);
-	border: none;
+	background: transparent;
+	border: 2px solid var(--color-gold);
 	outline: none;
 	transition: color 0.6s;
 }
@@ -77,6 +77,11 @@ html {
 .button:hover {
 	color: var(--color-white);
 	cursor: pointer;
+}
+
+.btn-active {
+	color: var(--color-black);
+	background: var(--color-gold);
 }
 
 .icon {
@@ -253,12 +258,6 @@ html {
 }
 
 .btn-toggle {
-	color: var(--color-gold);
-	background-color: transparent;
-	border: 2px solid var(--color-gold);
-}
-
-.toggle .button {
 	margin: 0 3px 6px;
 }
 
@@ -545,6 +544,7 @@ html {
 	}
 
 	.darkness {
+		display: none;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -554,6 +554,7 @@ html {
 	}
 
 	.darkness-active {
+		display: block;
 		background-color: rgba(0, 0, 0, 0.5);
 	}
 
