@@ -1,5 +1,7 @@
 'use strict';
 
+import i18Obj from './translate.js';
+
 const body = document.querySelector('body');
 const iconBurger = document.querySelector('.icon-burger');
 const headerNav = document.querySelector('.header-nav');
@@ -7,6 +9,8 @@ const darkness = document.querySelector('.darkness');
 const portfolioBtns = document.querySelector('.toggle');
 const btnToggle = portfolioBtns.querySelectorAll('.btn-toggle');
 const collageItems = document.querySelectorAll('.collage-item');
+const langButtons = document.querySelector('.languages-container');
+const langButton = langButtons.querySelectorAll('.lang-btn');
 
 
 iconBurger.addEventListener('click', function () {
@@ -31,11 +35,36 @@ function changeImage(event) {
 	if (event.target.classList.contains('btn-toggle')) {
 		btnToggle.forEach(el => el.classList.remove('btn-active'));
 		event.target.classList.add('btn-active');
-		collageItems.forEach((img, index) => img.src = `./assets/img/${event.target.dataset.season}/${index + 1}.jpg`)
+		collageItems.forEach((img, index) => {
+			img.src = `./assets/img/${event.target.dataset.i18n}/${index + 1}.jpg`;
+			img.alt = `${(event.target.dataset.i18n).replace(/(^|\s)\S/, function (a) { return a.toUpperCase() })} photography`;
+		})
 	}
 }
 
-portfolioBtns.addEventListener('click', changeImage)
+portfolioBtns.addEventListener('click', changeImage);
+
+
+function getTranslate(lang) {
+	const internationalization = document.querySelectorAll('[data-i18n]');
+	internationalization.forEach((el) => {
+		if (el.dataset.i18n in i18Obj[lang]) {
+			el.textContent = i18Obj[lang][el.dataset.i18n];
+			if (el.placeholder) {
+				el.placeholder = i18Obj[lang][el.dataset.i18n];
+				el.textContent = ''
+			}
+		}
+
+	})
+}
+
+langButtons.addEventListener('click', function (event) {
+	getTranslate(event.target.dataset.lang);
+	langButton.forEach(el => el.classList.remove('active-lang'));
+	event.target.classList.add('active-lang');
+})
+
 
 
 console.log(`
