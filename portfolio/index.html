@@ -14,7 +14,7 @@
 	<link rel="icon" href="assets/favicon.ico">
 </head>
 
-<body>
+<body class="body">
 	<div class="darkness"></div>
 	<header class="header">
 		<div class="container header-container">
@@ -33,10 +33,15 @@
 				</ul>
 			</nav>
 			<div class="languages-container">
-				<button class="active-lang lang-btn" data-lang="en">en</button>
+				<button class="en-lang active-lang lang-btn" data-lang="en">EN</button>
 				/
-				<button class="lang-btn" data-lang="ru">ru</button>
+				<button class="ru-lang lang-btn" data-lang="ru">RU</button>
 			</div>
+			<button class="theme-btn">
+				<svg class="icon">
+					<use xlink:href="assets/svg/sprite.svg#theme-icon"></use>
+				</svg>
+			</button>
 			<div class="icon-burger">
 				<span></span>
 			</div>
