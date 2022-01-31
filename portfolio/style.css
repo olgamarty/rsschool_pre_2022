@@ -592,6 +592,12 @@ html {
 		content: "";
 	}
 
+	.icon-burger:hover::before,
+	.icon-burger:hover::after,
+	.icon-burger:hover span {
+		background-color: var(--color-gold);
+	}
+
 	.icon-burger.opener span {
 		transform: scale(0) translate(0px, -50%);
 	}
@@ -624,6 +630,7 @@ html {
 
 	.open {
 		right: 0;
+		z-index: 1;
 	}
 
 	.darkness {
@@ -638,6 +645,7 @@ html {
 
 	.darkness-active {
 		display: block;
+		z-index: 1;
 		background-color: rgba(0, 0, 0, 0.5);
 	}
 
