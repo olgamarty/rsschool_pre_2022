@@ -618,6 +618,7 @@ html {
 		right: -620px;
 		width: 620px;
 		height: 100%;
+		z-index: 1;
 		padding: 134px 20px 0 127px;
 		overflow: auto;
 		background-color: var(--color-black);
@@ -630,7 +631,6 @@ html {
 
 	.open {
 		right: 0;
-		z-index: 1;
 	}
 
 	.darkness {
