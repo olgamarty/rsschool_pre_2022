@@ -62,13 +62,7 @@ preloadSummerImages();
 function getTranslate(lang) {
 	const internationalization = document.querySelectorAll('[data-i18n]');
 	internationalization.forEach((el) => {
-		if (el.dataset.i18n in i18Obj[lang]) {
-			el.textContent = i18Obj[lang][el.dataset.i18n];
-			if (el.placeholder) {
-				el.placeholder = i18Obj[lang][el.dataset.i18n];
-				el.textContent = ''
-			}
-		}
+		el.placeholder ? el.placeholder = i18Obj[lang][el.dataset.i18n] : el.textContent = i18Obj[lang][el.dataset.i18n];
 	})
 	language = lang;
 	if (lang === 'ru') {
@@ -78,9 +72,11 @@ function getTranslate(lang) {
 }
 
 langButtons.addEventListener('click', function (event) {
-	getTranslate(event.target.dataset.lang);
-	langButton.forEach(el => el.classList.remove('active-lang'));
-	event.target.classList.add('active-lang');
+	if (event.target.classList.contains('lang-btn')) {
+		getTranslate(event.target.dataset.lang);
+		langButton.forEach(el => el.classList.remove('active-lang'));
+		event.target.classList.add('active-lang');
+	}
 });
 
 
@@ -98,7 +94,6 @@ themeButton.addEventListener('click', function () {
 	sectionTitleWrappers.forEach(el => {
 		el.classList.toggle('section-title__wrapper_theme');
 	})
-	console.log(body.classList.contains('light-theme'));
 	body.classList.contains('light-theme') ? theme = 'light' : theme = 'dark';
 })
 
