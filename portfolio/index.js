@@ -14,6 +14,7 @@ const langButton = langButtons.querySelectorAll('.lang-btn');
 const themeButton = body.querySelector('.theme-btn');
 const sectionTitles = body.querySelectorAll('.section-title');
 const sectionTitleWrappers = body.querySelectorAll('.section-title__wrapper');
+const player = document.querySelector('.video-player');
 
 let language = 'en';
 let theme = 'dark';
@@ -146,6 +147,23 @@ function getLocalStorage() {
 }
 window.addEventListener('load', getLocalStorage)
 
+// Video player
+
+// const video = player.querySelector('.viewer');
+// const progress = player.querySelector('.progress');
+// const progressBar = player.querySelector('.progress__filled');
+// const playerToggle = player.querySelectorAll('.player__toggle');
+// const volume = player.querySelector('.player__volume');
+
+// function togglePlay() {
+// 	if (video.paused) {
+// 		video.play();
+// 	} else {
+// 		video.pause()
+// 	}
+// 	// const method = video.paused ? 'play' : 'pause';
+// 	// video[method]();
+// }
 
 
 

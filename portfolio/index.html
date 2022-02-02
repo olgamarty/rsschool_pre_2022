@@ -113,11 +113,19 @@
 					<h2 class="section-title" data-i18n="video">Video</h2>
 				</div>
 				<div class="video-player">
-					<button class="video-btn">
-						<svg class="icon icon-video">
-							<use xlink:href="assets/svg/sprite.svg#video-icon"></use>
-						</svg>
-					</button>
+					<video src="./assets/video/video.mp4" class="player__video viewer"></video>
+					<div class="player__controls">
+						<div class="progress">
+							<div class="progress__filled"></div>
+						</div>
+						<button class="video-btn player__toggle">
+							<svg class="icon icon-video">
+								<use xlink:href="assets/svg/sprite.svg#video-icon"></use>
+							</svg>
+						</button>
+						<input type="range" name="volume" class="player__volume" min="0" max="1" step="0.05" value="1">
+						<!-- <input type="range" name="plarbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1"> -->
+					</div>
 				</div>
 			</div>
 		</section>
