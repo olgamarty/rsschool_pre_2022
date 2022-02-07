@@ -1,0 +1,278 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url(./assets/img/forest.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	color: #dce6d9;
+	font-family: 'Nunito', sans-serif;
+	font-size: 18px;
+}
+
+.body__background {
+	background-color: rgba(11, 26, 2, 0.8);;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1440px;
+	height: 75px;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.logo {
+	width: 55px;
+	height: 55px;
+	text-decoration: none;
+}
+
+.icon {	
+	width: 95%;
+	height: 95%;	
+	fill: #dce6d9;
+	transition: 0.4s ease-in-out;
+	cursor: pointer;
+}
+
+.icon:hover {
+	fill: #bdae82;
+	transform: scale(1.05);
+}
+
+.header {
+	width: 100vw;;
+}
+
+.nav__list {
+	margin: 10px 0 0 0;
+	padding: 0;
+	display: flex;
+	justify-content: end;
+}
+
+.nav__item {
+	padding: 0;
+	margin: 0 0 0 18px;
+	list-style: none;
+}
+
+.nav__btn {
+	position:relative;
+	display: inline-block; 
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 
+		0px 3px rgb(98, 108, 88), /* gradient effects */
+		0px 4px rgba(88,98,78,1),
+		0px 5px rgba(78,88,68,1),
+		0px 6px rgba(68,78,58,1),
+		0px 7px rgba(58,68,48,1),
+		0px 8px rgba(48,58,38,1),
+		0px 14px 6px -1px rgba(8,18,0,1); /* shadow */
+	-webkit-transition: -webkit-box-shadow .1s ease-in-out;
+	margin-top: 15px;
+	margin-bottom:30px;	
+} 
+
+.nav__btn span {
+	background-color: #e3ecd8;
+	background-image: 
+		/* gloss gradient */
+		-webkit-gradient(
+			linear, 
+			left bottom, 
+			left top, 
+			color-stop(50%,rgba(255,255,255,0)), 
+			color-stop(50%,rgba(255,255,255,0.3)), 
+			color-stop(100%,rgba(255,255,255,0.2))),
+
+		/* dark outside gradient */
+		-webkit-gradient(
+			linear, 
+			left top, 
+			right top, 
+			color-stop(0%,rgba(210,210,210,0.3)), 
+			color-stop(20%,rgba(210,210,210,0)), 
+			color-stop(80%,rgba(210,210,210,0)), 
+			color-stop(100%,rgba(210,210,210,0.3))),
+
+		/* light inner gradient */
+		-webkit-gradient(
+			linear, 
+			left top, 
+			right top, 
+			color-stop(0%,rgba(255,255,255,0)), 
+			color-stop(20%,rgba(255,255,255,0.5)), 
+			color-stop(80%,rgba(255,255,255,0.5)), 
+			color-stop(100%,rgba(255,255,255,0))),        
+		
+		/* diagonal line pattern */
+		-webkit-gradient(
+			linear, 
+			0% 100%, 
+			100% 0%, 
+			color-stop(0%,rgba(255,255,255,0)), 
+			color-stop(40%,rgba(255,255,255,0)), 
+			color-stop(40%,#b3c98f), 
+			color-stop(60%,#b3c98f), 
+			color-stop(60%,rgba(255,255,255,0)), 
+			color-stop(100%,rgba(255,255,255,0)));
+	
+		-webkit-box-shadow:
+			  0px -1px #fff, /* top highlight */
+			  0px 1px 1px #FFFFFF; /* bottom edge */
+	
+	-webkit-background-size: 100%, 100%, 100%, 4px 4px;
+	-webkit-border-radius: 10px;
+	-webkit-transition: -webkit-transform .1s ease-in-out;
+	display: inline-block;
+	padding: 8px 18px 6px 18px;
+	color: #94a88c;
+	font-size: 16px;
+	cursor: pointer;
+	font-weight: 700;	
+	text-transform: uppercase;
+	text-shadow: 0px 1px #ffffff, 0px -1px #081401;
+}
+
+.btn-active span,
+.nav__btn span:hover {
+	color: #256306;
+	text-shadow: 0px -1px #142009;
+	cursor: pointer;
+}
+
+.btn-active,
+.nav__btn:active {
+	-webkit-box-shadow: 
+		0px 3px rgb(98, 108, 88),
+		0px 4px rgba(88,98,78,1),
+		0px 5px rgba(78,88,68,1),
+		0px 6px rgba(68,78,58,1),
+		0px 7px rgba(58,68,48,1),
+		0px 8px rgba(48,58,38,1),	
+		0px 10px 2px 0px rgba(8,18,0,.6); /* shadow */
+}
+
+.btn-active span,
+.nav__btn:active span{
+	-webkit-transform: translate(0, 5px); /* depth of button press */
+}
+
+.sound-image {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: calc(100vh - 135px);
+	min-height: 280px;  
+	background-image: url(./assets/img/forest.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	border-top: 1px solid #bdae82;
+	border-bottom: 1px solid #bdae82;
+}
+
+.sound-play {
+	width: 120px;
+	height: 120px;
+}
+
+.calendar-on {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px 15px;
+	text-transform: uppercase;
+	font-weight: 700;
+	opacity: 0.5;
+	background-color: transparent;
+	border: 1px solid #bdae82;
+	border-radius: 12px;
+	box-shadow: 2px 5px 8px #000000;
+	cursor: pointer;	
+	transition: 0.3s ease-in-out;
+}
+
+.calendar-on:hover {
+	background-color: #bdae82;	
+	color: #000;	
+	opacity: 1;
+}
+
+.calendar-on:active {
+	box-shadow: 1px 1px 4px #000000;
+	transform: translate(0, 5px);
+}
+
+.calendar {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	opacity: 0.4;
+	transition: 0.3s ease-in-out;	
+}
+
+.calendar:hover {
+	opacity: 0.9;
+}
+
+.calendar-close {
+	position: absolute;
+	top: -30px;
+	right: 10px;	
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	color: #ffffff;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+
+.calendar-close:hover {
+	color: #000;
+	background-color: #bdae82;
+	border-radius: 50%;
+}
+
+.calendar-img {
+	width: 250px;	
+}
+
+.calendar-toggle {
+	display: none;
+}
+
+.footer-container {
+	height: 60px;
+}
+
+.footer-link {
+	color: #dce6d9;
+	text-decoration: none;
+}
+
+.footer-link:hover {
+	color: #bdae82;
+}
+
+.footer_icon {
+	height: 40px;
+	width: 110px;
+}
+
+.unvisible {
+	display: none;
+}

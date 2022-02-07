@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Eco-sounds | Звуки природы</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<div class="body__background">
+		<header class="header">
+			<div class="container">
+				<a class="logo" href="/">
+					<svg class="icon">
+						<use xlink:href="assets/svg/sprite.svg#header-logo"></use>
+					</svg>
+				</a>
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item"><a class="nav__btn"><span data-bird="solovey">Соловей</span></a></li>
+						<li class="nav__item"><a class="nav__btn"><span data-bird="drozd">Дрозд</span></a></li>
+						<li class="nav__item"><a class="nav__btn"><span data-bird="zarynka">Малиновка</span></a></li>
+						<li class="nav__item"><a class="nav__btn"><span data-bird="javoronok">Жаворонок</span></a></li>
+						<li class="nav__item"><a class="nav__btn"><span data-bird="slavka">Славка</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="sound-image">
+			<div class="sound-play">
+				<svg class="icon icon-play">
+					<use xlink:href="assets/svg/sprite.svg#play"></use>
+				</svg>
+				<svg class="icon icon-pause unvisible">
+					<use xlink:href="assets/svg/sprite.svg#pause"></use>
+				</svg>
+			</div>
+			<div class="calendar-on calendar-toggle">Календарь</div>
+			<div class="calendar">
+				<div class="calendar-close">&#10006;</div>
+				<img class="calendar-img" src="http://calendar.volego.ru/2022/2/img?type=png&amp;no_footer=true"
+					alt="Календарь">
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container footer-container">
+				<p class="footer-copyright">© 2022</p>
+				<a href="https://github.com/olgamarty" class="footer-link">olgamarty</a>
+				<a href="https://rs.school/js-stage0/" target="_blank" class="footer-logo">
+					<svg class="icon footer_icon">
+						<use xlink:href="assets/svg/sprite.svg#rss-logo"></use>
+					</svg>
+				</a>
+			</div>
+		</footer>
+	</div>
+	<script src="./app.js"></script>
+</body>
+
+</html>
