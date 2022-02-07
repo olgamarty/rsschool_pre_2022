@@ -70,23 +70,32 @@ body {
 	position:relative;
 	display: inline-block; 
 	-webkit-border-radius: 10px;
+	border-radius: 10px;
 	-webkit-box-shadow: 
-		0px 3px rgb(98, 108, 88), /* gradient effects */
+		0px 3px rgb(98, 108, 88), 
 		0px 4px rgba(88,98,78,1),
 		0px 5px rgba(78,88,68,1),
 		0px 6px rgba(68,78,58,1),
 		0px 7px rgba(58,68,48,1),
 		0px 8px rgba(48,58,38,1),
-		0px 14px 6px -1px rgba(8,18,0,1); /* shadow */
+		0px 14px 6px -1px rgba(8,18,0,1);
+	box-shadow: 
+		0px 3px rgb(98, 108, 88), 
+		0px 4px rgba(88,98,78,1),
+		0px 5px rgba(78,88,68,1),
+		0px 6px rgba(68,78,58,1),
+		0px 7px rgba(58,68,48,1),
+		0px 8px rgba(48,58,38,1),
+		0px 14px 6px -1px rgba(8,18,0,1);
 	-webkit-transition: -webkit-box-shadow .1s ease-in-out;
+	transition: box-shadow .1s ease-in-out;
 	margin-top: 15px;
 	margin-bottom:30px;	
 } 
 
 .nav__btn span {
 	background-color: #e3ecd8;
-	background-image: 
-		/* gloss gradient */
+	background-image:
 		-webkit-gradient(
 			linear, 
 			left bottom, 
@@ -95,7 +104,6 @@ body {
 			color-stop(50%,rgba(255,255,255,0.3)), 
 			color-stop(100%,rgba(255,255,255,0.2))),
 
-		/* dark outside gradient */
 		-webkit-gradient(
 			linear, 
 			left top, 
@@ -105,7 +113,6 @@ body {
 			color-stop(80%,rgba(210,210,210,0)), 
 			color-stop(100%,rgba(210,210,210,0.3))),
 
-		/* light inner gradient */
 		-webkit-gradient(
 			linear, 
 			left top, 
@@ -115,7 +122,6 @@ body {
 			color-stop(80%,rgba(255,255,255,0.5)), 
 			color-stop(100%,rgba(255,255,255,0))),        
 		
-		/* diagonal line pattern */
 		-webkit-gradient(
 			linear, 
 			0% 100%, 
@@ -128,12 +134,19 @@ body {
 			color-stop(100%,rgba(255,255,255,0)));
 	
 		-webkit-box-shadow:
-			  0px -1px #fff, /* top highlight */
-			  0px 1px 1px #FFFFFF; /* bottom edge */
+			0px -1px #ffffff,
+			0px 1px 1px #ffffff;
+
+		box-shadow:
+			0px -1px #ffffff,
+			0px 1px 1px #ffffff;
 	
 	-webkit-background-size: 100%, 100%, 100%, 4px 4px;
+	background-size: 100%, 100%, 100%, 4px 4px;
 	-webkit-border-radius: 10px;
+	border-radius: 10px;
 	-webkit-transition: -webkit-transform .1s ease-in-out;
+	transition: transform .1s ease-in-out;
 	display: inline-block;
 	padding: 8px 18px 6px 18px;
 	color: #94a88c;
@@ -160,12 +173,21 @@ body {
 		0px 6px rgba(68,78,58,1),
 		0px 7px rgba(58,68,48,1),
 		0px 8px rgba(48,58,38,1),	
-		0px 10px 2px 0px rgba(8,18,0,.6); /* shadow */
+		0px 10px 2px 0px rgba(8,18,0,.6);
+	box-shadow: 
+		0px 3px rgb(98, 108, 88),
+		0px 4px rgba(88,98,78,1),
+		0px 5px rgba(78,88,68,1),
+		0px 6px rgba(68,78,58,1),
+		0px 7px rgba(58,68,48,1),
+		0px 8px rgba(48,58,38,1),	
+		0px 10px 2px 0px rgba(8,18,0,.6);
 }
 
 .btn-active span,
 .nav__btn:active span{
-	-webkit-transform: translate(0, 5px); /* depth of button press */
+	-webkit-transform: translate(0, 5px);
+	transform: translate(0, 5px);
 }
 
 .sound-image {
