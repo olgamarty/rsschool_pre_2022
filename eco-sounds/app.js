@@ -26,6 +26,15 @@ function playAudio() {
 	}
 }
 
+function preloadImages() {
+	let birds = ['drozd', 'forest', 'javoronok', 'slavka', 'solovey', 'zarynka'];
+	birds.forEach(el => {
+		const img = new Image();
+		img.src = `./assets/img/${el}.jpg`;
+	})
+}
+preloadImages();
+
 function toggleBtn() {
 	soundButton.classList.toggle('pause');
 	soundButton.classList.contains('pause') ? (
