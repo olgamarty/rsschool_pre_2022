@@ -1,7 +1,7 @@
 'use strict';
 
 
-// const logoBird = document.querySelector('.logo');
+const body = document.querySelector('body');
 const navButtons = document.querySelector('.nav__list');
 const btnToggle = navButtons.querySelectorAll('.nav__btn');
 const soundImage = document.querySelector('.sound-image');
@@ -56,6 +56,7 @@ function changeSound(event) {
 		btnToggle.forEach(el => el.classList.remove('btn-active'));
 		event.target.parentNode.classList.add('btn-active');
 		soundImage.style.backgroundImage = `url(./assets/img/${event.target.dataset.bird}.jpg)`;
+		body.style.backgroundImage = `url(./assets/img/${event.target.dataset.bird}.jpg)`;
 		audio.src = `./assets/audio/${event.target.dataset.bird}.mp3`;
 		soundButton.classList.remove('pause');
 		toggleBtn()
