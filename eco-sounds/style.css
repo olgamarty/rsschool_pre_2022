@@ -220,7 +220,7 @@ body {
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
-	opacity: 0.4;
+	opacity: 0.5;
 	transition: 0.3s ease-in-out;	
 }
 
@@ -230,8 +230,8 @@ body {
 
 .calendar-close {
 	position: absolute;
-	top: -30px;
-	right: 10px;	
+	top: -35px;
+	right: 2px;	
 	width: 30px;
 	height: 30px;
 	line-height: 30px;
@@ -247,8 +247,15 @@ body {
 	border-radius: 50%;
 }
 
+.calendar-wrapper {
+	width: 210px;
+	height: 180px;
+	overflow: hidden;
+	border-radius: 15px;
+}
+
 .calendar-img {
-	width: 250px;	
+	width: 210px;	
 }
 
 .calendar-toggle {
