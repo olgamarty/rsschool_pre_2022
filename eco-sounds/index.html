@@ -17,43 +17,51 @@
 	<div class="body__background">
 		<header class="header">
 			<div class="container">
-				<div class="logo">
+				<a class="logo" href="/">
 					<svg class="icon">
 						<use xlink:href="assets/svg/sprite.svg#header-logo"></use>
 					</svg>
-				</div>
+				</a>
 				<nav class="nav">
 					<ul class="nav__list">
-						<li class="nav__item"><a class="nav__btn nav__btn2"><span>Соловей</span></a></li>
-						<li class="nav__item"><a class="nav__btn"><span>Дрозд</span></a></li>
-						<li class="nav__item"><a class="nav__btn"><span>Малиновка</span></a></li>
-						<li class="nav__item"><a class="nav__btn"><span>Жаворонок</span></a></li>
-						<li class="nav__item"><a class="nav__btn"><span>Славка</span></a></li>
+						<li class="nav__item"><a class="nav__btn"><span data-bird="solovey">Соловей</span></a></li>
+						<li class="nav__item"><a class="nav__btn"><span data-bird="drozd">Дрозд</span></a></li>
+						<li class="nav__item"><a class="nav__btn"><span data-bird="zarynka">Малиновка</span></a></li>
+						<li class="nav__item"><a class="nav__btn"><span data-bird="javoronok">Жаворонок</span></a></li>
+						<li class="nav__item"><a class="nav__btn"><span data-bird="slavka">Славка</span></a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<main class="sound-image">
-			<audio src="./assets/audio/forest.mp3"></audio>
 			<div class="sound-play">
-				<svg class="icon">
+				<svg class="icon icon-play">
 					<use xlink:href="assets/svg/sprite.svg#play"></use>
 				</svg>
+				<svg class="icon icon-pause unvisible">
+					<use xlink:href="assets/svg/sprite.svg#pause"></use>
+				</svg>
+			</div>
+			<div class="calendar-on calendar-toggle">Календарь</div>
+			<div class="calendar">
+				<div class="calendar-close">&#10006;</div>
+				<img class="calendar-img" src="http://calendar.volego.ru/2022/2/img?type=png&amp;no_footer=true"
+					alt="Календарь">
 			</div>
 		</main>
 		<footer class="footer">
 			<div class="container footer-container">
 				<p class="footer-copyright">© 2022</p>
 				<a href="https://github.com/olgamarty" class="footer-link">olgamarty</a>
-				<a href="https://rs.school/js/" target="_blank" class="footer-logo">
+				<a href="https://rs.school/js-stage0/" target="_blank" class="footer-logo">
 					<svg class="icon footer_icon">
 						<use xlink:href="assets/svg/sprite.svg#rss-logo"></use>
 					</svg>
 				</a>
 			</div>
 		</footer>
-
 	</div>
+	<script src="./app.js"></script>
 </body>
 
 </html>
