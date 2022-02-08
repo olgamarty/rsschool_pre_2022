@@ -11,6 +11,7 @@ const iconPause = soundButton.querySelector('.icon-pause');
 const calendarClose = soundImage.querySelector('.calendar-close');
 const calendarOn = soundImage.querySelector('.calendar-on');
 const calendar = soundImage.querySelector('.calendar');
+const logoBird = document.querySelector('.logo');
 const audio = new Audio();
 
 let isPlay = false;
@@ -53,6 +54,7 @@ soundButton.addEventListener('click', toggleBtn);
 
 function changeSound(event) {
 	if (event.target.parentNode.classList.contains('nav__btn')) {
+		logoBird.classList.remove('logo-active');
 		btnToggle.forEach(el => el.classList.remove('btn-active'));
 		event.target.parentNode.classList.add('btn-active');
 		soundImage.style.backgroundImage = `url(./assets/img/${event.target.dataset.bird}.jpg)`;
@@ -63,6 +65,16 @@ function changeSound(event) {
 	}
 }
 navButtons.addEventListener('click', changeSound);
+
+logoBird.addEventListener('click', function () {
+	soundImage.style.backgroundImage = `url(./assets/img/forest.jpg)`;
+	body.style.backgroundImage = `url(./assets/img/forest.jpg)`;
+	audio.src = `./assets/audio/forest.mp3`;
+	soundButton.classList.remove('pause');
+	logoBird.classList.add('logo-active');
+	btnToggle.forEach(el => el.classList.remove('btn-active'));
+	toggleBtn()
+});
 
 
 calendarOn.addEventListener('click', function () {

@@ -14,6 +14,7 @@ body {
 	color: #dce6d9;
 	font-family: 'Nunito', sans-serif;
 	font-size: 18px;
+	transition: 1.5s ease-in;
 }
 
 .body__background {
@@ -34,6 +35,10 @@ body {
 	width: 55px;
 	height: 55px;
 	text-decoration: none;
+}
+
+.logo-active .icon {
+	fill: #bdae82;
 }
 
 .icon {	
@@ -204,6 +209,7 @@ body {
 	background-size: cover;
 	border-top: 1px solid #bdae82;
 	border-bottom: 1px solid #bdae82;
+	transition: 1s ease-in;
 }
 
 .sound-play {
