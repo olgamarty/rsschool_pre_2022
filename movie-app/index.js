@@ -294,6 +294,7 @@ headerSearch.addEventListener('input', function () {
 searchClear.addEventListener('click', function () {
 	headerSearch.value = "";
 	searchClear.classList.add('invisible');
+	headerSearch.focus();
 });
 
 // Добавляем текст ошибки, если не грузится API
