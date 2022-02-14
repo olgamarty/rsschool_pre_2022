@@ -11,6 +11,8 @@ body {
 
 body {
 	background-color: #1a191f;
+	background-image: url(./assets/img/blackmamba.png);
+	background-repeat: repeat;
 	font-family: "Open Sans", sans-serif;
 }
 
@@ -119,12 +121,13 @@ body {
 .movie {
 	width: 240px;
 	margin: 10px;
-	position: relative;
+	position: relative;	
 }
 
 .movie__picture-inner {
 	position: relative;
 	height: 360px;
+	box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
 }
 
 .movie__picture {
@@ -174,21 +177,21 @@ body {
 	border-radius: 50%;
 	width: 36px;
 	height: 36px;
-	background-color: #1a191f;
+	background-color: rgba(26, 25, 31, 0.8);;
 	color: #ffffff;
 	font-size: 14px;
 }
 
 .movie__rating_green {
-	border: 1px solid green;
+	border: 2px solid green;
 }
 
 .movie__rating_orange {
-	border: 1px solid orange;
+	border: 2px solid orange;
 }
 
 .movie__rating_red {
-	border: 1px solid red;
+	border: 2px solid red;
 }
 
 
