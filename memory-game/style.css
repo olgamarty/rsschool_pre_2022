@@ -3,3 +3,60 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+.wrapper {
+	display: flex;
+	height: 100vh;
+	background-image: url(./assets/img/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	width: 950px;
+	height: 760px;
+	margin: 50px auto;
+}
+
+.card {
+	position: relative;
+	width: calc(20% - 10px);
+	height: calc(25% - 10px);
+	margin: 5px;
+	border-radius: 7px;
+	box-shadow: 0 0 20px #fae7bf;
+	cursor: pointer;
+	transform: scale(1);		
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+}
+
+.card.turn {
+	transform: rotateY(180deg);
+}
+
+.card:active {
+	transform: scale(0.97);
+	transition: transform 0.4s;
+}
+
+.front-face, 
+.back-face {
+	position: absolute;
+	width: 100%;
+	height: 100%;	
+	border: 1px solid #333333;
+	border-radius: 7px;
+	object-fit: cover;
+	backface-visibility: hidden;
+}
+
+.front-face {
+	transform: rotateY(180deg);
+}
+
+.back-face {
+	transform: rotateY(360deg);
+}
