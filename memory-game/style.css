@@ -42,6 +42,10 @@
 	transition: transform 0.4s;
 }
 
+.no-event {
+	pointer-events: none;
+}
+
 .front-face, 
 .back-face {
 	position: absolute;
@@ -59,4 +63,18 @@
 
 .back-face {
 	transform: rotateY(360deg);
+}
+
+.score-wrapper {
+	display: flex;
+	width: 940px;
+	height: 750px;
+	margin: 55px auto;
+	background-color: rgba(250, 231, 191, 0.7);
+	border-radius: 7px;
+	box-shadow: 0 0 20px #fae7bf;
+}
+
+.invisible {
+	display: none;
 }
