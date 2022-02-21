@@ -15,10 +15,14 @@
 
 <body>
 	<div class="wrapper">
-		<div class="greetings invisible">
-
+		<div class="greetings">
+			<div class="logo-wrapper">
+				<img class="logo-harry" src="./assets/img/logo_harry_potter.png" alt="Harry Potter logo">
+				<div class="description">memory game</div>
+			</div>
+			<button class="button button-greetings">New game</button>
 		</div>
-		<section class="cards">
+		<section class="cards invisible">
 			<div class="card" data-hero="ginny">
 				<img src="./assets/img/ginny1.jpg" alt="Ginny" class="front-face">
 				<img src="./assets/img/back_card.jpg" alt="Memory game" class="back-face">
@@ -110,14 +114,14 @@
 
 				</table>
 			</div>
-			<button class="button">New game</button>
+			<button class="button button-score">New game</button>
 		</div>
 		<footer class="footer">
 			<div class="footer-container">
 				<p class="footer-copyright">© 2022</p>
 				<a href="https://github.com/olgamarty" class="footer-link">olgamarty</a>
 				<a href="https://rs.school/js-stage0/" target="_blank" class="footer-logo">
-					<svg class="icon footer_icon">
+					<svg class="footer_icon">
 						<use xlink:href="assets/svg/sprite.svg#rss-logo"></use>
 					</svg>
 				</a>
