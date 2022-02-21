@@ -1,0 +1,215 @@
+@font-face {
+	font-family: "Hurry Potter";	
+	src: local("Hurry Potter"), 
+		url("./fonts/harry-potter.woff") format("woff"),
+		url("./fonts/harryPotter.ttf") format("ttf");
+	font-weight: normal;	
+	font-style: normal;	
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Hurry Potter";
+	font-size: 24px;
+}
+
+.wrapper {
+	display: flex;
+	min-height: 100vh;
+	background-image: url(./assets/img/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	width: 950px;
+	max-height: 760px;
+	margin: 3% auto;
+}
+
+.card {
+	position: relative;
+	width: calc(20% - 10px);
+	max-height: calc(25% - 10px);
+	margin: 5px;
+	border-radius: 7px;
+	box-shadow: 0 0 20px #fae7bf;
+	cursor: pointer;
+	transform: scale(1);		
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+}
+
+.card.turn {
+	transform: rotateY(180deg);
+}
+
+.card:active {
+	transform: scale(0.97);
+	transition: transform 0.4s;
+}
+
+.no-event {
+	pointer-events: none;
+}
+
+.front-face, 
+.back-face {
+	position: absolute;
+	width: 100%;
+	height: 100%;	
+	border: 1px solid #333333;
+	border-radius: 7px;
+	object-fit: cover;
+	backface-visibility: hidden;
+}
+
+.front-face {
+	transform: rotateY(180deg);
+}
+
+.back-face {
+	transform: rotateY(360deg);
+}
+
+.score-wrapper,
+.greetings {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 940px;
+	max-height: 750px;
+	margin: 55px auto;	
+	text-align: center;
+	background-color: rgba(250, 231, 191, 0.7);
+	border-radius: 7px;
+	box-shadow: 0 0 20px #fae7bf;
+}
+
+.congratulation {
+	font-family: "Hurry Potter";
+	font-size: 60px;
+	color: #1b1d2a;
+	text-shadow: 2px 2px 5px #d66a3c,
+					0 0 20px #bf6b47,
+					0 0 30px #bf6b47;
+}
+
+.tables-score {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: start;
+}
+
+.table {
+	width: 250px;
+	margin: 10px 10px;
+	text-align: center;
+	border-collapse: collapse;
+	color: #1b1d2a;
+}
+
+.table-caption {
+	font-size: 35px;
+	margin-bottom: 15px;
+}
+
+th,
+td {
+	padding: 5px;
+	border-bottom: 1px solid #b96342;
+}
+
+th:first-child,
+td:first-child {
+	border-right: 1px solid #b96342;
+}
+
+.button {
+	display: block;
+	padding: 10px 35px;
+	margin: 20px auto;
+	font-family: inherit;
+	font-size: 30px;
+	color: #1b1d2a;
+	border: 1px solid #c9927b;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #f7c97a;
+	box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #bf6b47;
+	transition: all 0.1s ease-in-out;
+}
+
+.button:hover {
+	color: #fae7bf;
+	background-color: #272f3a;
+	border: 1px solid #272f3a;
+}
+
+.button:active {
+	box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 940px;
+	height: 50px;
+	padding: 6px;
+	margin: 0 auto;
+}
+
+.footer-copyright {
+	font-family: "Hurry Potter";
+	font-size: 24px;
+	color: #fae7bf;
+	text-shadow: 1px 1px #000000;
+}
+
+.footer-link {
+	font-family: "Hurry Potter";
+	font-size: 30px;
+	color: #fae7bf;
+	text-decoration: none;
+	text-shadow: 1px 1px #000000;
+	transition: 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+	color: #f9cf87;
+}
+
+.footer_icon {
+	height: 33px;
+	width: 90px;
+	fill: #fae7bf;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.footer_icon:hover {	
+	fill: #f9cf87;
+}
+
+
+.invisible {
+	display: none;
+	transition: 0.5s ease-in-out;
+}
