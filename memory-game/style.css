@@ -93,6 +93,27 @@ body {
 	box-shadow: 0 0 20px #fae7bf;
 }
 
+.greetings {
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.logo-harry {
+	width: 600px;
+	height: 367px;
+	margin: 10px auto -40px;
+}
+
+.description {
+	font-family: "Hurry Potter";
+	font-size: 90px;
+	line-height: 90px;
+	color: #1b1d2a;
+	text-shadow: 2px 2px 5px #d66a3c,
+					0 0 20px #bf6b47,
+					0 0 30px #bf6b47;
+}
+
 .congratulation {
 	font-family: "Hurry Potter";
 	font-size: 60px;
@@ -137,6 +158,7 @@ td:first-child {
 	display: block;
 	padding: 10px 35px;
 	margin: 20px auto;
+	z-index: 5;
 	font-family: inherit;
 	font-size: 30px;
 	color: #1b1d2a;
@@ -208,8 +230,33 @@ td:first-child {
 	fill: #f9cf87;
 }
 
-
 .invisible {
 	display: none;
 	transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-height: 820px) {
+	.footer-container {
+		justify-content: flex-start;
+		height: 40px;
+	}
+	
+	.footer-copyright {
+		font-size: 18px;
+		margin: 0 20px 0 5px;
+	}
+	
+	.footer-link {
+		font-size: 24px;
+	}
+
+	.footer_icon {
+		height: 26px;
+		width: 70px;
+	}
+
+	.footer-logo {
+		margin-left: auto;
+		margin-right: 5px;
+	}
 }
