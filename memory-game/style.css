@@ -14,8 +14,8 @@
 }
 
 body {
-	font-family: 'Nunito', sans-serif;
-	font-size: 18px;
+	font-family: "Hurry Potter";
+	font-size: 24px;
 }
 
 .wrapper {
@@ -79,14 +79,84 @@ body {
 	transform: rotateY(360deg);
 }
 
-.score-wrapper {
+.score-wrapper,
+.greetings {
 	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 	width: 940px;
-	height: 750px;
-	margin: 55px auto;
+	max-height: 750px;
+	margin: 55px auto;	
+	text-align: center;
 	background-color: rgba(250, 231, 191, 0.7);
 	border-radius: 7px;
 	box-shadow: 0 0 20px #fae7bf;
+}
+
+.congratulation {
+	font-family: "Hurry Potter";
+	font-size: 60px;
+	color: #1b1d2a;
+	text-shadow: 2px 2px 5px #d66a3c,
+					0 0 20px #bf6b47,
+					0 0 30px #bf6b47;
+}
+
+.tables-score {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: start;
+}
+
+.table {
+	width: 250px;
+	margin: 10px 10px;
+	text-align: center;
+	border-collapse: collapse;
+	color: #1b1d2a;
+}
+
+.table-caption {
+	font-size: 35px;
+	margin-bottom: 15px;
+}
+
+th,
+td {
+	padding: 5px;
+	border-bottom: 1px solid #b96342;
+}
+
+th:first-child,
+td:first-child {
+	border-right: 1px solid #b96342;
+}
+
+.button {
+	display: block;
+	padding: 10px 35px;
+	margin: 20px auto;
+	font-family: inherit;
+	font-size: 30px;
+	color: #1b1d2a;
+	border: 1px solid #c9927b;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #f7c97a;
+	box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #bf6b47;
+	transition: all 0.1s ease-in-out;
+}
+
+.button:hover {
+	color: #fae7bf;
+	background-color: #272f3a;
+	border: 1px solid #272f3a;
+}
+
+.button:active {
+	box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
 }
 
 .footer {
@@ -141,4 +211,5 @@ body {
 
 .invisible {
 	display: none;
+	transition: 0.5s ease-in-out;
 }
