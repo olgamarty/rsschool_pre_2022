@@ -15,7 +15,7 @@ let lockField = false;
 let firstCard;
 let secondCard;
 let counter = 0;
-let scoresArray = [];
+let scoresArray = JSON.parse(localStorage.getItem('score')) || [];
 
 function turnCard() {
 	if (lockField) return;
@@ -84,7 +84,7 @@ function showResult() {
 		createTopScoresTable();
 		cardsField.classList.add('invisible');
 		scoreField.classList.remove('invisible');
-	}, 1000);
+	}, 700);
 }
 
 function createLastScoresTable() {
@@ -216,4 +216,22 @@ buttonScore.addEventListener('click', function (event) {
 
 cards.forEach(card => card.addEventListener('click', turnCard));
 
+function setLocalStorage() {
+	localStorage.setItem('score', JSON.stringify(scoresArray));
+}
+window.addEventListener('beforeunload', setLocalStorage);
 
+
+console.log(`
+Оценка за задание 60 баллов.
+1. Вёрстка +10
+- реализован интерфейс игры +5
+- в футере приложения есть ссылка на гитхаб автора приложения, год создания приложения, логотип курса со ссылкой на курс +5
+2. Логика игры. Карточки, по которым кликнул игрок, переворачиваются согласно правилам игры +10
+3. Игра завершается, когда открыты все карточки +10
+4. По окончанию игры выводится её результат - количество ходов, которые понадобились для завершения игры +10
+5. Результаты последних 10 игр сохраняются в local storage. Есть таблица рекордов, в которой сохраняются результаты предыдущих 10 игр +10
+6. По клику на карточку – она переворачивается плавно, если пара не совпадает – обе карточки так же плавно переварачиваются рубашкой вверх +10
+7. Очень высокое качество оформления приложения и/или дополнительный не предусмотренный в задании функционал, улучшающий качество приложения +10
+- высокое качество оформления приложения предполагает собственное оригинальное оформление равное или отличающееся в лучшую сторону по сравнению с демо
+`)
