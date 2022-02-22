@@ -15,7 +15,7 @@ let lockField = false;
 let firstCard;
 let secondCard;
 let counter = 0;
-let scoresArray = JSON.parse(localStorage.getItem('score')) || [];
+let scoresArray = JSON.parse(localStorage.getItem('scoreHarry')) || [];
 
 function turnCard() {
 	if (lockField) return;
@@ -80,6 +80,7 @@ function mixing() {
 function showResult() {
 	setTimeout(() => {
 		congratulation.textContent = `Congratulations! Your score ${counter}!`;
+		setLocalStorage()
 		createLastScoresTable();
 		createTopScoresTable();
 		cardsField.classList.add('invisible');
@@ -217,7 +218,7 @@ buttonScore.addEventListener('click', function (event) {
 cards.forEach(card => card.addEventListener('click', turnCard));
 
 function setLocalStorage() {
-	localStorage.setItem('score', JSON.stringify(scoresArray));
+	localStorage.setItem('scoreHarry', JSON.stringify(scoresArray));
 }
 window.addEventListener('beforeunload', setLocalStorage);
 
