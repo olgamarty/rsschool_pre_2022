@@ -1,11 +1,11 @@
 # Портфолио фотографа - лендинг
 
-https://rolling-scopes-school.github.io/olgamarty-JSFEPRESCHOOL/portfolio/
+https://olgamarty.github.io/rsschool_pre_2022/portfolio/
 
 # Звуки природы и голоса птиц
 
-https://rolling-scopes-school.github.io/olgamarty-JSFEPRESCHOOL/eco-sounds/
+https://olgamarty.github.io/rsschool_pre_2022/eco-sounds/
 
 # Работа с API Кинопоиск
 
-https://rolling-scopes-school.github.io/olgamarty-JSFEPRESCHOOL/movie-app/
+https://olgamarty.github.io/rsschool_pre_2022/movie-app/
